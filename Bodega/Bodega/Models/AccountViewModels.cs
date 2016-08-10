@@ -49,9 +49,9 @@ namespace Bodega.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Correo electrónico")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Nombre de Usuario")]
+       // [EmailAddress]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -64,6 +64,20 @@ namespace Bodega.Models
 
     public class RegisterViewModel
     {
+
+        //Agregamos estas propiedades para que a la hora de registrar nos pida nombre de usuario
+        //y nombre completo
+        [Required]
+        [Display(Name = "Nombre Completo")]
+        public string NombreCompleto { get; set; }
+        
+
+        [Required]
+        [Display(Name = "Nombre de Usuario")]
+        public string UserName { get; set; } 
+
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+
         [Required]
         [EmailAddress]
         [Display(Name = "Correo electrónico")]
